@@ -30,6 +30,7 @@
                         <ul class="nav navbar-nav menu_nav justify-content-center w-100">
                             <li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                             <li class="nav-item"><a class="nav-link" href="#portfolio">Tech Stack</a></li>
                             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                             <li class="nav-item"><a class="nav-link" href="#cv">Resume</a></li>
@@ -100,13 +101,62 @@
 					<div class="feature_item">
 						<img class="service_icon" src="img/services/Data Entry.png" alt="Data Entry">
 						<h4>Data Entry</h4>
-						<p>I keep your information accurate and organized. I use spreadsheet formulas to clean and structure raw data, ensuring it is ready for your systems and works perfectly with your automations.</p>
+						<p>Dedicated data management services focused on accuracy, quality, and system readiness. Proficient in advanced spreadsheet functions (VLOOKUP, array formulas) to cleanse, structure, and organize raw data, making it actionable and compatible with automated workflows.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!--================ End Features Area =================-->
+
+	<!--================ Start Projects Area =================-->
+	<section id="projects" class="project_area section_gap">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8 text-center">
+					<div class="main_title">
+						<h2>Projects</h2>
+					</div>
+					<div class="project_disclaimer">
+						<p>Disclaimer: The projects shown are mock projects created for demonstration and training purposes only and were not implemented for real clients.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-10">
+					<!-- Make.com Carousel -->
+					<div class="project_carousel_wrapper">
+						<h2 class="project_carousel_title">Make.com</h2>
+						<div class="project_carousel owl-carousel" id="make_carousel">
+							<a href="img/Projects/Make1.png" class="project_carousel_item">
+								<img src="img/Projects/Make1.PNG" alt="Make.com Project 1">
+							</a>
+							<a href="img/Projects/Make2.png" class="project_carousel_item">
+								<img src="img/Projects/Make2.PNG" alt="Make.com Project 2">
+							</a>
+							<a href="img/Projects/Make3.png" class="project_carousel_item">
+								<img src="img/Projects/Make3.png" alt="Make.com Project 3">
+							</a>
+						</div>
+					</div>
+					
+					<!-- Zapier Carousel -->
+					<div class="project_carousel_wrapper">
+						<h2 class="project_carousel_title">Zapier</h2>
+						<div class="project_carousel owl-carousel" id="zapier_carousel">
+							<a href="img/Projects/zap1.png" class="project_carousel_item">
+								<img src="img/Projects/zap1.png" alt="Zapier Project 1">
+							</a>
+							<a href="img/Projects/zap2.png" class="project_carousel_item">
+								<img src="img/Projects/zap2.png" alt="Zapier Project 2">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Projects Area =================-->
 
 	<!--================ Start Tech Stack Area (placeholder) =================-->
 	<section id="portfolio" class="portfolio_area section_gap">
@@ -122,7 +172,7 @@
 				<div class="col-lg-10">
 					<div class="techstack_grid">
 						<img src="img/TechStack/make-logo.png" alt="Make.com" class="techstack_icon">
-						<img src="img/TechStack/zapier-icon.png" alt="Zapier" class="techstack_icon">
+						<img src="img/TechStack/Zapier-icon.png" alt="Zapier" class="techstack_icon">
 						<img src="img/TechStack/shopify.png" alt="Shopify" class="techstack_icon">
 						<img src="img/TechStack/active-campaign.png" alt="ActiveCampaign" class="techstack_icon">
 						<img src="img/TechStack/Asana.png" alt="Asana" class="techstack_icon">
@@ -282,6 +332,43 @@
 				});
 
 				$('.portfolio_carousel').magnificPopup({
+					delegate: 'a',
+					type: 'image',
+					gallery: { enabled: true },
+					mainClass: 'mfp-fade',
+					image: { verticalFit: true }
+				});
+
+				// Initialize Make.com carousel
+				$('#make_carousel').owlCarousel({
+					loop: true,
+					margin: 20,
+					nav: true,
+					dots: true,
+					navText: ['<span class="fa fa-chevron-left"></span>', '<span class="fa fa-chevron-right"></span>'],
+					responsive: {
+						0: { items: 1 },
+						768: { items: 2 },
+						992: { items: 2 }
+					}
+				});
+
+				// Initialize Zapier carousel
+				$('#zapier_carousel').owlCarousel({
+					loop: true,
+					margin: 20,
+					nav: true,
+					dots: true,
+					navText: ['<span class="fa fa-chevron-left"></span>', '<span class="fa fa-chevron-right"></span>'],
+					responsive: {
+						0: { items: 1 },
+						768: { items: 2 },
+						992: { items: 2 }
+					}
+				});
+
+				// Initialize lightbox for project carousels
+				$('.project_carousel').magnificPopup({
 					delegate: 'a',
 					type: 'image',
 					gallery: { enabled: true },
