@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DigitalCurator | Frontend Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+    <script src="tailwind.config.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="text-xl font-extrabold tracking-tighter text-slate-900 dark:text-white font-headline">
+                JamesAlagaban
+            </div>
+            <div class="hidden md:flex items-center gap-10 font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-sm">
+                <a class="text-violet-700 dark:text-violet-400 border-b-2 border-violet-700 dark:border-violet-400 pb-1"
+                    href="#hero">Home</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+                    href="#projects">Projects</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+                    href="#about">About</a>
+            </div>
+            <button
+                class="bg-primary text-on-primary px-8 py-3 rounded-full font-bold text-sm hover:bg-primary-container transition-all shadow-ambient"
+                id="get-in-touch-nav">
+                Get In Touch
+            </button>
+        </div>
+    </nav>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[870px] flex items-center px-6 overflow-hidden" id="hero">
+            <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+                <div class="z-10">
+                    <span class="inline-block text-xl md:text-2xl font-medium text-secondary mb-6 tracking-tight">Hey, I'm James 👋</span>
+                    <h1
+                        class="font-headline text-6xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-on-surface mb-8">
+                        Workflow Automation <span class="text-primary">Virtual Assistant.</span>
+                    </h1>
+                    <p class="text-secondary text-lg md:text-xl max-w-lg mb-10 leading-relaxed">
+                        Stop drowning in busywork. Let me streamline your operations with custom automations so you can focus on growing your business. Click below to start reclaiming your time today!
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a class="bg-primary text-on-primary px-10 py-4 rounded-full font-bold hover:bg-primary-container transition-all flex items-center gap-2 group shadow-ambient"
+                            href="#projects">
+                            Browse Projects
+                            <span
+                                class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </a>
+                        <button
+                            class="bg-surface-container-lowest border border-outline-variant/15 text-on-surface px-10 py-4 rounded-full font-bold hover:bg-surface-container-low transition-all"
+                            id="get-in-touch-hero">
+                            Get In Touch
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div
+                        class="aspect-square rounded-[3rem] overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700">
+                        <img alt="Portrait of the developer" class="w-full h-full object-cover"
+                            data-alt="Close-up of a high-end minimalist workstation with a laptop, mechanical keyboard, and soft ambient purple lighting in a clean office"
+                            src="images/profile.png" />
+                    </div>
+                    <!-- Decorative element -->
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects Grid Section -->
+        <section class="py-24 bg-surface-container-low" id="projects">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                    <div>
+                        <h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tight mb-4">Featured Projects
+                        </h2>
+                        <p class="text-secondary max-w-md">A selection of my latest work.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="group bg-surface-container-lowest rounded-xl p-4 shadow-ambient transition-all hover:-translate-y-2 cursor-pointer project-card flex flex-col justify-between">
+                        <div>
+                            <div class="aspect-video rounded-lg overflow-hidden mb-6 bg-white/50 border border-slate-100 flex items-center justify-center p-2">
+                                <img alt="GoHighLevel Sync" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 project-img" src="images/Projects/GoHighLevel.png" />
+                            </div>
+                            <div class="px-2 pb-2">
+                                <div class="flex justify-between items-start mb-2 gap-2">
+                                    <h3 class="font-headline text-xl font-bold">Client Onboarding Sync</h3>
+                                    <span class="text-[10px] font-bold text-primary px-3 py-1 rounded-full bg-primary/10 uppercase tracking-widest whitespace-nowrap">GHL</span>
+                                </div>
+                                <p class="text-secondary text-sm mb-4 leading-relaxed">Client welcome flow</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="group bg-surface-container-lowest rounded-xl p-4 shadow-ambient transition-all hover:-translate-y-2 cursor-pointer project-card flex flex-col justify-between">
+                        <div>
+                            <div class="aspect-video rounded-lg overflow-hidden mb-6 bg-white/50 border border-slate-100 flex items-center justify-center p-2">
+                                <img alt="Make Flow 1" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 project-img" src="images/Projects/Make4.PNG" />
+                            </div>
+                            <div class="px-2 pb-2">
+                                <div class="flex justify-between items-start mb-2 gap-2">
+                                    <h3 class="font-headline text-xl font-bold">Feedback routing</h3>
+                                    <span class="text-[10px] font-bold text-primary px-3 py-1 rounded-full bg-primary/10 uppercase tracking-widest whitespace-nowrap">Make</span>
+                                </div>
+                                <p class="text-secondary text-sm mb-4 leading-relaxed">Route feedback to the right team members</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="group bg-surface-container-lowest rounded-xl p-4 shadow-ambient transition-all hover:-translate-y-2 cursor-pointer project-card flex flex-col justify-between">
+                        <div>
+                            <div class="aspect-video rounded-lg overflow-hidden mb-6 bg-white/50 border border-slate-100 flex items-center justify-center p-2">
+                                <img alt="Make Flow 2" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 project-img" src="images/Projects/Make5.PNG" />
+                            </div>
+                            <div class="px-2 pb-2">
+                                <div class="flex justify-between items-start mb-2 gap-2">
+                                    <h3 class="font-headline text-xl font-bold">Category routing</h3>
+                                    <span class="text-[10px] font-bold text-primary px-3 py-1 rounded-full bg-primary/10 uppercase tracking-widest whitespace-nowrap">Make</span>
+                                </div>
+                                <p class="text-secondary text-sm mb-4 leading-relaxed">Route the lead to the right funnel </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="group bg-surface-container-lowest rounded-xl p-4 shadow-ambient transition-all hover:-translate-y-2 cursor-pointer project-card flex flex-col justify-between">
+                        <div>
+                            <div class="aspect-video rounded-lg overflow-hidden mb-6 bg-white/50 border border-slate-100 flex items-center justify-center p-2">
+                                <img alt="n8n Automation" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 project-img" src="images/Projects/n8n-1.png" />
+                            </div>
+                            <div class="px-2 pb-2">
+                                <div class="flex justify-between items-start mb-2 gap-2">
+                                    <h3 class="font-headline text-xl font-bold">Lead Gen</h3>
+                                    <span class="text-[10px] font-bold text-primary px-3 py-1 rounded-full bg-primary/10 uppercase tracking-widest whitespace-nowrap">n8n</span>
+                                </div>
+                                <p class="text-secondary text-sm mb-4 leading-relaxed">AI assisted lead routing</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 5 -->
+                    <div class="group bg-surface-container-lowest rounded-xl p-4 shadow-ambient transition-all hover:-translate-y-2 cursor-pointer project-card flex flex-col justify-between">
+                        <div>
+                            <div class="aspect-video rounded-lg overflow-hidden mb-6 bg-white/50 border border-slate-100 flex items-center justify-center p-2">
+                                <img alt="n8n Workflow" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 project-img" src="images/Projects/n8n-2.PNG" />
+                            </div>
+                            <div class="px-2 pb-2">
+                                <div class="flex justify-between items-start mb-2 gap-2">
+                                    <h3 class="font-headline text-xl font-bold">Support Ticket Router</h3>
+                                    <span class="text-[10px] font-bold text-primary px-3 py-1 rounded-full bg-primary/10 uppercase tracking-widest whitespace-nowrap">n8n</span>
+                                </div>
+                                <p class="text-secondary text-sm mb-4 leading-relaxed">AI-based classification and routing of incoming customer service queries.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 6 -->
+                    <div class="group bg-surface-container-lowest rounded-xl p-4 shadow-ambient transition-all hover:-translate-y-2 cursor-pointer project-card flex flex-col justify-between">
+                        <div>
+                            <div class="aspect-video rounded-lg overflow-hidden mb-6 bg-white/50 border border-slate-100 flex items-center justify-center p-2">
+                                <img alt="Zapier Zap 1" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 project-img" src="images/Projects/zap1.PNG" />
+                            </div>
+                            <div class="px-2 pb-2">
+                                <div class="flex justify-between items-start mb-2 gap-2">
+                                    <h3 class="font-headline text-xl font-bold">Form route</h3>
+                                    <span class="text-[10px] font-bold text-primary px-3 py-1 rounded-full bg-primary/10 uppercase tracking-widest whitespace-nowrap">Zapier</span>
+                                </div>
+                                <p class="text-secondary text-sm mb-4 leading-relaxed">Real-time alerts for high-value conversions pushed to team channels.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 7 -->
+                    <div class="group bg-surface-container-lowest rounded-xl p-4 shadow-ambient transition-all hover:-translate-y-2 cursor-pointer project-card flex flex-col justify-between">
+                        <div>
+                            <div class="aspect-video rounded-lg overflow-hidden mb-6 bg-white/50 border border-slate-100 flex items-center justify-center p-2">
+                                <img alt="Zapier Zap 2" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 project-img" src="images/Projects/zap2.PNG" />
+                            </div>
+                            <div class="px-2 pb-2">
+                                <div class="flex justify-between items-start mb-2 gap-2">
+                                    <h3 class="font-headline text-xl font-bold">Task Gen</h3>
+                                    <span class="text-[10px] font-bold text-primary px-3 py-1 rounded-full bg-primary/10 uppercase tracking-widest whitespace-nowrap">Zapier</span>
+                                </div>
+                                <p class="text-secondary text-sm mb-4 leading-relaxed">Task creation and notify team members</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Experience Section -->
+        <section class="py-24 bg-surface">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-12 gap-16">
+                    <div class="md:col-span-4">
+                        <h2 class="font-headline text-4xl font-bold tracking-tight mb-8">Work Experience</h2>
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-4 p-4 rounded-xl transition-all cursor-pointer bg-surface-container-low exp-nav-item"
+                                id="exp-nav-isabela">
+                                <div class="w-1 h-8 bg-primary rounded-full"></div>
+                                <span class="font-headline font-bold text-xl">ISU - ICT</span>
+                            </div>
+                            <div class="flex items-center gap-4 p-4 rounded-xl transition-all cursor-pointer hover:bg-surface-container-low exp-nav-item"
+                                id="exp-nav-sasimon">
+                                <div class="w-1 h-8 bg-transparent"></div>
+                                <span class="font-headline font-bold text-xl text-secondary">S.A Simon Glass</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-8">
+                        <div class="bg-surface-container-lowest p-10 rounded-3xl shadow-ambient transition-opacity duration-300"
+                            id="experience-content">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+                                <div>
+                                    <h3 class="font-headline text-3xl font-bold mb-1">Admin Assistant Intern</h3>
+                                    <p class="text-primary font-bold">Isabela State University - ICT Faculty • Isabela, Philippines</p>
+                                </div>
+                                <span class="text-secondary font-medium">March 2025 — May 2025</span>
+                            </div>
+                            <div class="space-y-6 text-secondary leading-relaxed">
+                                <p>Provided daily administrative assistance to keep office operations steady and organized.</p>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                        <span>Supported faculty by organizing examinee documents and overseeing exams to ensure everything ran on schedule.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                        <span>Handled the designing of certificates and checking papers.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Skills Section -->
+        <section class="py-24 bg-surface-container-low">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="font-headline text-4xl font-bold tracking-tight mb-16 text-center">Tech Stack
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
+                    <!-- Column 1 -->
+                    <div class="flex flex-col gap-6">
+                        <h1 class="font-headline text-2xl font-extrabold tracking-tighter text-on-surface border-l-4 border-primary pl-6">
+                            Automation & CRM
+                        </h1>
+                        <ul class="space-y-3 pl-7 text-secondary font-medium">
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>n8n</li>
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>Make.com</li>
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>Zapier</li>
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>GoHighLevel</li>
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>Pipedrive</li>
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>HubSpot</li>
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>ActiveCampaign</li>
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>Mailchimp</li>
+                        </ul>
+                    </div>
+                    <!-- Column 2 -->
+                    <div class="flex flex-col gap-6">
+                        <h1 class="font-headline text-2xl font-extrabold tracking-tighter text-on-surface border-l-4 border-primary pl-6">
+                            Admin & Projects
+                        </h1>
+                        <ul class="space-y-3 pl-7 text-secondary font-medium">
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>Google Workspace (Sheets, Forms, Calendar)</li>
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>Trello</li>
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>Slack</li>
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>Monday.com</li>
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>Airtable</li>
+                        </ul>
+                    </div>
+                    <!-- Column 3 -->
+                    <div class="flex flex-col gap-6">
+                        <h1 class="font-headline text-2xl font-extrabold tracking-tighter text-on-surface border-l-4 border-primary pl-6">
+                            Forms, E-com & AI
+                        </h1>
+                        <ul class="space-y-3 pl-7 text-secondary font-medium">
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>Typeform</li>
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>JotForm</li>
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>Shopify</li>
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>ChatGPT</li>
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>Google Gemini</li>
+                            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>Claude</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- My Story Section -->
+        <section class="py-24 bg-surface" id="about">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid gap-20 items-center max-w-4xl mx-auto">
+                    <div>
+                        <h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tight mb-8">About me</h2>
+                        <div class="space-y-6 text-secondary text-lg leading-relaxed">
+                            <p>I'm James, an Automation VA from the Philippines. I help
+                                tech-enabled businesses automate their operations using n8n,
+                                Make.com, and Zapier.
+                            <p>I’m someone who prefers working behind the scenes, making sure everything runs smoothly, while keeping communication clear and transparent.</p>
+                            <p>I value being reliable and keeping things simple. If I can help
+a business run more efficiently by taking care of the small
+details, then I’ve done my job well.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-50 dark:bg-slate-950 w-full py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="font-['Plus_Jakarta_Sans'] font-bold text-slate-900 dark:text-white">
+                JamesAlagaban
+            </div>
+            <div class="flex flex-wrap justify-center gap-8 font-['Inter'] text-sm text-slate-500 dark:text-slate-400">
+                <a class="text-violet-600 dark:text-violet-400 font-semibold hover:underline decoration-violet-500 underline-offset-4"
+                    href="#hero">Home</a>
+                <a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:underline decoration-violet-500 underline-offset-4 transition-transform hover:translate-y-[-2px]"
+                    href="#projects">Projects</a>
+                <a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:underline decoration-violet-500 underline-offset-4 transition-transform hover:translate-y-[-2px]"
+                    href="#about">About</a>
+                <a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:underline decoration-violet-500 underline-offset-4 transition-transform hover:translate-y-[-2px]"
+                    href="https://www.linkedin.com/in/alagabanjames/" target="_blank">LinkedIn</a>
+                <a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:underline decoration-violet-500 underline-offset-4 transition-transform hover:translate-y-[-2px]"
+                    href="https://www.onlinejobs.ph/jobseekers/info/4575625" target="_blank">OnlineJobsPH</a>
+                <a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:underline decoration-violet-500 underline-offset-4 transition-transform hover:translate-y-[-2px]"
+                    href="https://www.upwork.com/freelancers/~013cbde8f7855908f1" target="_blank">Upwork</a>
+            </div>
+            <p class="font-['Inter'] text-sm text-slate-500 dark:text-slate-400">
+                © 2026 James Alagaban Portfolio.
+            </p>
+        </div>
+    </footer>
+    <!-- Contact Modal -->
+    <div class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4" id="contact-modal">
+        <div class="absolute inset-0 bg-slate-900/50 backdrop-blur-sm" id="modal-backdrop"></div>
+        <div
+            class="relative bg-white dark:bg-slate-900 w-full max-w-md rounded-2xl shadow-2xl overflow-hidden p-8 transform transition-all">
+            <button class="absolute top-4 right-4 text-slate-400 hover:text-primary transition-colors" id="close-modal">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div class="text-center">
+                <h2 class="font-headline text-3xl font-extrabold text-on-surface mb-2">Get In Touch</h2>
+                <p class="text-secondary mb-8 font-body">I'm currently available for new projects. Let's build something
+                    amazing together.</p>
+                <div class="space-y-4">
+                    <a class="flex items-center gap-4 p-4 rounded-xl border border-outline-variant/30 hover:border-primary/50 hover:bg-primary/5 transition-all group"
+                        href="mailto:james.s.alagaban@gmail.com">
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined">mail</span>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-xs font-bold uppercase tracking-widest text-secondary">Email</div>
+                            <div class="font-headline font-bold text-on-surface">james.s.alagaban@gmail.com</div>
+                        </div>
+                    </a>
+                    <a class="flex items-center gap-4 p-4 rounded-xl border border-outline-variant/30 hover:border-primary/50 hover:bg-primary/5 transition-all group"
+                        href="https://wa.link/phz5ms" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined">chat</span>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-xs font-bold uppercase tracking-widest text-secondary">WhatsApp</div>
+                            <div class="font-headline font-bold text-on-surface">wa.link/phz5ms</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Project Lightbox Modal -->
+    <div class="hidden fixed inset-0 z-[110] flex items-center justify-center p-4 md:p-12" id="lightbox-modal">
+        <div class="absolute inset-0 bg-slate-950/90 backdrop-blur-md" id="lightbox-backdrop"></div>
+        <div class="relative w-full max-w-6xl flex flex-col items-center">
+            <button
+                class="absolute -top-12 right-0 md:-right-12 text-white hover:text-primary transition-colors z-[120]"
+                id="close-lightbox">
+                <span class="material-symbols-outlined text-4xl">close</span>
+            </button>
+            <img alt="Project enlargement" class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
+                id="lightbox-img" src="" />
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>
